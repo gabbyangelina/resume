@@ -1,0 +1,119 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    padding:10%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 25px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(8, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "r r h h h h h h"
+        "r r w w w e e e"
+        "c c w w w e e e"
+        "c c w w w e e e"
+        "c c w w w e e e";
+}
+li{
+    font-weight: 500;
+    padding:10px;
+}
+
+body{
+    font-family: 'Lora', serif;
+    background-color:lightgrey
+}
+
+ul{
+    list-style: none;
+}
+
+
+h1{
+    font-size: 4em;
+    padding-bottom:15px;
+    padding-left:5px;
+    font-size: 4em;
+}
+
+h2{
+    padding-top:45px;
+    padding-bottom:45px;
+    font-weight:bold;
+    font-size: 110px;
+}
+
+h3{
+    padding-top:45px;
+    padding-bottom:15px;
+    font-size: 75px;
+}
+
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "c"
+        "e"
+        "w"
+        "r"
+        "h";
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+
+li{
+    font-size: 55px;
+}
+
+
+header {
+    font-size: 4em;
+    grid-area: h;
+    padding-top: 600px;
+}
+
+.resume {grid-area: r;}
+
+.contact {grid-area: c; padding-top:165px;}
+
+.education {grid-area: e; padding-top:220px;}
+
+
+.workexperience {grid-area: w; padding-top:210px}
+
+
+footer{
+    grid-area: f;
+}
