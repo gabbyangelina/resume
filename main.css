@@ -1,9 +1,5 @@
-*{
-    /* outline: 2px dashed green; */
-    margin: 0;
-    padding:0;
-}
-/* @media screen and (max-width: 600px) {
+
+@media screen and (max-width: 600px) {
 .container {
     height: 100%;
     display: grid;
@@ -55,20 +51,20 @@ h1{
     font-size: 4em;
     padding-bottom:15px;
     padding-left:5px;
-    font-size: 4em;
+    font-size: 2em;
 }
 
 h2{
     padding-top:45px;
     padding-bottom:45px;
     font-weight:bold;
-    font-size: 110px;
+    font-size: 55px;
 }
 
 h3{
     padding-top:45px;
     padding-bottom:15px;
-    font-size: 75px;
+    font-size: 37.5px;
 }
 
 
@@ -94,12 +90,12 @@ h3{
 /* step 1 - assign each of your sections a letter */
 
 li{
-    font-size: 55px;
+    font-size: 27.5px;
 }
 
 
 header {
-    font-size: 4em;
+    font-size: 2em;
     grid-area: h;
     padding-top: 600px;
 }
@@ -110,10 +106,4 @@ header {
 
 .education {grid-area: e; padding-top:220px;}
 
-
 .workexperience {grid-area: w; padding-top:210px}
-
-
-footer{
-    grid-area: f;
-}
