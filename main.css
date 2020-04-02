@@ -7,11 +7,11 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "q"
-        "h"
+        "c"
+        "w"
         "e"
-        "b"
-        "f";
+        "r"
+        "h";
 }
  */
 /* step one - build your grid */
