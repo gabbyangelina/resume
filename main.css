@@ -1,19 +1,26 @@
+/* step 1 - assign each of your sections a letter */
 
-@media screen and (max-width: 800px) {
-.container {
-    height: 100%;
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "c"
-        "w"
-        "e"
-        "r"
-        "h";
+li{
+    font-size: 13.75px;
 }
- */
+
+
+header {
+    font-size: 1em;
+    grid-area: h;
+    padding-top: 600px;
+}
+
+.resume {grid-area: r;}
+
+.contact {grid-area: c; padding-top:165px;}
+
+.education {grid-area: e; padding-top:220px;}
+
+.workexperience {grid-area: w; padding-top:210px}
+
+
+
 /* step one - build your grid */
 .container {
     padding:10%;
@@ -67,6 +74,26 @@ h3{
 }
 
 
+
+
+@media screen and (max-width: 800px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "c"
+        "w"
+        "e"
+        "r"
+        "h";
+}
+}
+ */
+
+
 /* step three - build a grid that becomes active when the pixels are 800px or less */
 @media screen and (max-width: 600px) {
 
@@ -86,23 +113,3 @@ h3{
     }
 }
 
-/* step 1 - assign each of your sections a letter */
-
-li{
-    font-size: 13.75px;
-}
-
-
-header {
-    font-size: 1em;
-    grid-area: h;
-    padding-top: 600px;
-}
-
-.resume {grid-area: r;}
-
-.contact {grid-area: c; padding-top:165px;}
-
-.education {grid-area: e; padding-top:220px;}
-
-.workexperience {grid-area: w; padding-top:210px}
