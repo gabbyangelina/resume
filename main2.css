@@ -1,0 +1,114 @@
+/* I simplified the grid to make it a 3 column grid that technically only has 2 rows */
+
+body {
+    background-color: #f8f8ff;
+    font-family: 'Lora', serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+li {
+    padding: 10px 0px;
+}
+
+h2 {
+    font-size: 27.5px;
+    padding-bottom:45px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18.5px;
+}
+
+
+/* step one - build your grid */
+
+.container {
+    /* Uncomment justify-itmes: center; if you want everything to be centered on your page; */
+
+    justify-items: center;
+    padding:10%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 25px;
+    /* this will be  the same for everyone (no longer same for everyone now) */ 
+    /* grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); */
+    grid-template-columns: repeat(3, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        
+    /* /* "n n n"
+    "p p p"
+    "a b c"; */
+
+    "p n ."
+    "a b c"; */
+}
+
+.name {
+    /* margin-left pushes your name away from your profile picture, experiment wit hthe value to see how close ofar you want it */
+    margin-left: 50%;
+    margin-bottom: auto;
+    margin-top: auto;
+    grid-area: n;
+    /* Makes it so your name stays as one line */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-picture {
+    width: 400px;
+    grid-area: p;
+}
+
+.column-1 {
+    grid-area: a;
+}
+
+.column-2 {
+    grid-area: b;
+}
+
+.column-3 {
+    grid-area: c;
+}
+
+
+
+/* MEDIA QUERY AT 600px */
+@media screen and (max-width: 800px) {
+    .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "n"
+            "p"
+            "a"
+            "b"
+            "c";
+    }
+
+
+    /* removed the margin when it goes to mobile */
+    .name {
+        margin-left: 0%;
+        margin-bottom: auto;
+        margin-top: auto;
+        grid-area: n;
+    }
+    }
