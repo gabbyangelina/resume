@@ -1,7 +1,7 @@
 /* I simplified the grid to make it a 3 column grid that technically only has 2 rows */
 
 body {
-    background-color: #f8f8ff;
+    background-color: ghostwhite;
     font-family: 'Lora', serif;
 }
 
@@ -23,10 +23,12 @@ h2 {
     font-size: 27.5px;
     padding-bottom:45px;
     font-weight: 700;
+    color:indigo
 }
 
 h3 {
     font-size: 18.5px;
+    color:black
 }
 
 
@@ -53,12 +55,12 @@ h3 {
     "a b c"; */
 
     "p n ."
-    "a b c"; */
+    "a b c"; 
 }
 
 .name {
     /* margin-left pushes your name away from your profile picture, experiment wit hthe value to see how close ofar you want it */
-    margin-left: 50%;
+    margin-left: 25%;
     margin-bottom: auto;
     margin-top: auto;
     grid-area: n;
@@ -66,10 +68,11 @@ h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: x-large;
 }
 
 .profile-picture {
-    width: 400px;
+    width: 200px;
     grid-area: p;
 }
 
@@ -77,12 +80,32 @@ h3 {
     grid-area: a;
 }
 
+.column-1 h2 {
+    padding-left:40px;
+}
+
 .column-2 {
     grid-area: b;
 }
 
+.column-2 h2 {
+    padding-left: 35px;
+}
+
+.column-2 h3 {
+    padding-left: 35px;
+}
+
 .column-3 {
     grid-area: c;
+}
+
+.column-3 h2 {
+    padding-left: 45px;
+}
+
+.column-3 h3 {
+    padding-left: 45px;
 }
 
 
