@@ -108,6 +108,10 @@ h3 {
     padding-left: 45px;
 }
 
+.column-3 li {
+    padding-left:8px;
+}
+
 
 
 /* MEDIA QUERY AT 600px */
